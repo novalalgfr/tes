@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Apotek Mitra Sehat</title>
+    <title>Barang Keluar - NusaGriya</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 min-h-screen">
@@ -12,13 +12,13 @@
       class="fixed top-0 left-0 h-full w-56 bg-white border-r border-gray-200 flex flex-col"
     >
       <div class="px-5 py-5 border-b border-gray-100">
-        <h1 class="text-base font-semibold text-gray-800">Mitra Sehat</h1>
-        <p class="text-xs text-gray-400">Apotek</p>
+        <h1 class="text-base font-semibold text-gray-800">NusaGriya</h1>
+        <p class="text-xs text-gray-400">Toko Bangunan</p>
       </div>
       <nav class="flex-1 px-3 py-4 space-y-1">
         <a
           href="#"
-          class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 text-sm font-medium text-gray-800"
+          class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +57,11 @@
               d="M12 4v16m-8-8h16"
             />
           </svg>
-          Obat Masuk
+          Barang Masuk
         </a>
         <a
           href="#"
-          class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50"
+          class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 text-sm font-medium text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
               d="M20 12H4"
             />
           </svg>
-          Obat Keluar
+          Barang Keluar
         </a>
         <p class="text-xs text-gray-400 px-3 pt-3 pb-1 uppercase tracking-wide">
           Master Data
@@ -100,7 +100,7 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-          Kategori Obat
+          Kategori Barang
         </a>
         <a
           href="#"
@@ -120,7 +120,7 @@
               d="M20 7H4a1 1 0 00-1 1v10a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1zM16 3H8v4h8V3z"
             />
           </svg>
-          Daftar Obat
+          Daftar Barang
         </a>
         <p class="text-xs text-gray-400 px-3 pt-3 pb-1 uppercase tracking-wide">
           Lainnya
@@ -172,36 +172,17 @@
 
     <!-- Main Content -->
     <div class="ml-56 p-6">
-      <div class="mb-6">
-        <h2 class="text-lg font-semibold text-gray-800">Dashboard</h2>
-        <p class="text-sm text-gray-400">Selamat datang, Admin</p>
-      </div>
-
-      <div class="grid grid-cols-2 gap-4 mb-6 lg:grid-cols-4">
-        <div class="bg-white border border-gray-200 rounded-xl p-4">
-          <p class="text-xs text-gray-400 mb-1">Total Obat</p>
-          <p class="text-2xl font-semibold text-gray-800">84</p>
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-semibold text-gray-800">Barang Keluar</h2>
+          <p class="text-sm text-gray-400">Catat transaksi barang keluar</p>
         </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-4">
-          <p class="text-xs text-gray-400 mb-1">Total Stok Masuk</p>
-          <p class="text-2xl font-semibold text-gray-800">320</p>
-        </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-4">
-          <p class="text-xs text-gray-400 mb-1">Total Stok Keluar</p>
-          <p class="text-2xl font-semibold text-gray-800">178</p>
-        </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-4">
-          <p class="text-xs text-gray-400 mb-1">Stok Tertinggi</p>
-          <p class="text-2xl font-semibold text-gray-800">120</p>
-          <p class="text-xs text-gray-400 mt-1">Paracetamol 500mg</p>
-        </div>
-      </div>
-
-      <div class="bg-white border border-gray-200 rounded-xl p-5">
-        <div class="flex items-center gap-2 mb-4">
+        <button
+          class="flex items-center gap-2 bg-gray-800 text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-4 h-4 text-red-400"
+            class="w-4 h-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -210,63 +191,128 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.5"
-              d="M12 9v4m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"
+              d="M12 4v16m-8-8h16"
             />
           </svg>
-          <h3 class="text-sm font-medium text-gray-700">
-            Stok Terendah
-            <span class="text-gray-400 font-normal">(kurang dari 10)</span>
-          </h3>
-        </div>
+          Tambah
+        </button>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
         <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-gray-100">
-              <th class="text-left text-xs text-gray-400 font-medium pb-2">
-                Nama Obat
+          <thead class="bg-gray-50 border-b border-gray-100">
+            <tr>
+              <th class="text-left text-xs text-gray-400 font-medium px-4 py-3">
+                No
               </th>
-              <th class="text-left text-xs text-gray-400 font-medium pb-2">
+              <th class="text-left text-xs text-gray-400 font-medium px-4 py-3">
+                Tanggal
+              </th>
+              <th class="text-left text-xs text-gray-400 font-medium px-4 py-3">
+                Nama Barang
+              </th>
+              <th class="text-left text-xs text-gray-400 font-medium px-4 py-3">
                 Kategori
               </th>
-              <th class="text-right text-xs text-gray-400 font-medium pb-2">
-                Stok
+              <th
+                class="text-right text-xs text-gray-400 font-medium px-4 py-3"
+              >
+                Jumlah Keluar
               </th>
-              <th class="text-right text-xs text-gray-400 font-medium pb-2">
-                Status
+              <th class="text-left text-xs text-gray-400 font-medium px-4 py-3">
+                Keterangan
+              </th>
+              <th
+                class="text-center text-xs text-gray-400 font-medium px-4 py-3"
+              >
+                Aksi
               </th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-50">
             <tr>
-              <td class="py-2 text-gray-700">Amoxicillin 500mg</td>
-              <td class="py-2 text-gray-400">Antibiotik</td>
-              <td class="py-2 text-right text-gray-700">3</td>
-              <td class="py-2 text-right">
-                <span
-                  class="bg-red-50 text-red-500 text-xs px-2 py-0.5 rounded-full"
-                  >Tidak Tersedia</span
-                >
+              <td class="px-4 py-3 text-gray-400">1</td>
+              <td class="px-4 py-3 text-gray-600">01 Jun 2026</td>
+              <td class="px-4 py-3 text-gray-800 font-medium">
+                Semen Portland
+              </td>
+              <td class="px-4 py-3 text-gray-400">Semen</td>
+              <td class="px-4 py-3 text-right text-gray-800">10</td>
+              <td class="px-4 py-3 text-gray-400">Penjualan harian</td>
+              <td class="px-4 py-3 text-center">
+                <div class="flex items-center justify-center gap-2">
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Detail
+                  </button>
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-xs text-red-400 border border-red-100 px-2 py-1 rounded-lg hover:bg-red-50"
+                  >
+                    Hapus
+                  </button>
+                </div>
               </td>
             </tr>
             <tr>
-              <td class="py-2 text-gray-700">Vitamin C 1000mg</td>
-              <td class="py-2 text-gray-400">Vitamin</td>
-              <td class="py-2 text-right text-gray-700">7</td>
-              <td class="py-2 text-right">
-                <span
-                  class="bg-green-50 text-green-600 text-xs px-2 py-0.5 rounded-full"
-                  >Tersedia</span
-                >
+              <td class="px-4 py-3 text-gray-400">2</td>
+              <td class="px-4 py-3 text-gray-600">01 Jun 2026</td>
+              <td class="px-4 py-3 text-gray-800 font-medium">
+                Cat Tembok Putih
+              </td>
+              <td class="px-4 py-3 text-gray-400">Cat</td>
+              <td class="px-4 py-3 text-right text-gray-800">5</td>
+              <td class="px-4 py-3 text-gray-400">Pesanan pelanggan</td>
+              <td class="px-4 py-3 text-center">
+                <div class="flex items-center justify-center gap-2">
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Detail
+                  </button>
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-xs text-red-400 border border-red-100 px-2 py-1 rounded-lg hover:bg-red-50"
+                  >
+                    Hapus
+                  </button>
+                </div>
               </td>
             </tr>
             <tr>
-              <td class="py-2 text-gray-700">Antasida Tablet</td>
-              <td class="py-2 text-gray-400">Antasida</td>
-              <td class="py-2 text-right text-gray-700">2</td>
-              <td class="py-2 text-right">
-                <span
-                  class="bg-red-50 text-red-500 text-xs px-2 py-0.5 rounded-full"
-                  >Tidak Tersedia</span
-                >
+              <td class="px-4 py-3 text-gray-400">3</td>
+              <td class="px-4 py-3 text-gray-600">02 Jun 2026</td>
+              <td class="px-4 py-3 text-gray-800 font-medium">Pipa PVC 1/2"</td>
+              <td class="px-4 py-3 text-gray-400">Pipa</td>
+              <td class="px-4 py-3 text-right text-gray-800">8</td>
+              <td class="px-4 py-3 text-gray-400">-</td>
+              <td class="px-4 py-3 text-center">
+                <div class="flex items-center justify-center gap-2">
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Detail
+                  </button>
+                  <button
+                    class="text-xs text-gray-500 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-xs text-red-400 border border-red-100 px-2 py-1 rounded-lg hover:bg-red-50"
+                  >
+                    Hapus
+                  </button>
+                </div>
               </td>
             </tr>
           </tbody>
